@@ -1,0 +1,260 @@
+/* Test Stuff */
+
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+
+.column {
+    float: left;
+    /* width: 33.33%; */
+    width: 50%;
+    padding: 5px;
+}
+
+
+/* Clear floats after image containers */
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+/* The TypeWritter Stuff */
+
+
+/* .typewriter h1 { */
+
+.typewriter p {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    /* border-right: .15em solid orange; */
+    border-right: .15em solid rgb(255, 255, 255);
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    /* margin: 0 auto; Use this is we want the typing to start in the center */
+    margin: 1 auto;
+    /* Use this is we want the typing to start on the left */
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    /* animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite; */
+    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+}
+
+
+/* Just the blinker  */
+
+
+/* .blinker h1 { */
+
+.blinker p {
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    /* border-right: .15em solid orange; */
+    border-right: .15em solid rgb(255, 255, 255);
+    /* The typwriter cursor */
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    /* margin: 0 auto; Use this is we want the typing to start in the center */
+    margin: 1 auto;
+    /* Use this is we want the typing to start on the left */
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    /* animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite; */
+    animation: blink-caret .75s step-end infinite;
+}
+
+
+/* The typing effect */
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+
+/* The typewriter cursor effect */
+
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+
+/* The Fade In Stuff */
+
+.textappear h1 {
+    display: inline-block;
+    /* font-family: 'Dancing Script'; */
+    /* font-size: 100px; */
+    /* color: black; */
+    text-transform: none;
+    /* margin: 0 20px; */
+    opacity: 0.0;
+    animation: fadeIn 4s;
+    -webkit-animation: fadeIn 4s forwards;
+}
+
+.textappear h5 {
+    display: inline-block;
+    /* font-family: 'Dancing Script'; */
+    /* font-size: 100px; */
+    /* color: black; */
+    text-transform: none;
+    /* margin: 0 20px; */
+    opacity: 0.0;
+    animation: fadeIn 4s;
+    -webkit-animation: fadeIn 4s forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* Global CSS variables */
+
+:root {
+    --spacing-company: 3rem;
+    --font-weight: 400;
+    --border-radius: 0;
+}
+
+
+/* Typography */
+
+h2,
+h3,
+hgroup> :last-child {
+    font-weight: 200;
+}
+
+small {
+    color: var(--muted-color);
+}
+
+
+/* Header */
+
+.hero {
+    /* background-color: #394046; */
+    background-color: #000000;
+    background-image: "/rubens_tiger.png";
+    background-position: center;
+    background-size: cover;
+}
+
+.hero_resources {
+    /* background-color: #394046; */
+    background-color: #0032A0;
+    background-image: "/rubens_tiger.png";
+    background-position: center;
+    background-size: cover;
+}
+
+.hero_investments {
+    /* background-color: #394046; */
+    background-color: #0da000;
+    background-image: "/rubens_tiger.png";
+    background-position: center;
+    background-size: cover;
+}
+
+header {
+    padding: var(--spacing-company) 0;
+}
+
+header hgroup> :last-child {
+    color: var(--h3-color);
+}
+
+header hgroup {
+    margin-bottom: var(--spacing-company);
+}
+
+
+/* Nav */
+
+summary[role="link"].contrast:is([aria-current], :hover, :active, :focus) {
+    background-color: transparent;
+    color: var(--contrast-hover);
+}
+
+
+/* Main */
+
+@media (min-width: 992px) {
+    main .grid {
+        grid-column-gap: var(--spacing-company);
+        grid-template-columns: auto 25%;
+    }
+}
+
+form.grid {
+    grid-row-gap: 0;
+}
+
+
+/* Aside nav */
+
+aside img {
+    margin-bottom: 0.25rem;
+}
+
+aside p {
+    margin-bottom: var(--spacing-company);
+    line-height: 1.25;
+}
