@@ -1034,6 +1034,35 @@ svg {
 	}
 }
 
+// ben's added about page content class (delete this later)
+.about_page_content {
+	overflow: hidden;
+	position: absolute;
+	backface-visibility: hidden;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	-webkit-overflow-scrolling: touch;
+
+	&.scrollBar {
+		overflow-y: auto;
+	}
+
+	.windows .defaultScroll & {
+		overflow: auto;
+		overflow-x: hidden;
+	}
+
+	.mobile & {
+		overflow: auto;
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+	}
+}
+// end added about page content class
+
 /* Background Fade */
 .fade .content { background: rgba(0,0,0,0.6); } /*default*/
 .fade-1 .content { background: rgba(0,0,0,0.1); }
@@ -1045,6 +1074,9 @@ svg {
 .fade-7 .content { background: rgba(0,0,0,0.7); }
 .fade-8 .content { background: rgba(0,0,0,0.8); }
 .fade-9 .content { background: rgba(0,0,0,0.9); }
+
+// Ben's added fade here for the about page content (delete this later)
+.fade-6 .about_page_content { background: rgba(0,0,0,0.9); }
 
 .whiteSlide[class*="fade"] .content { background: rgba(255,255,255,0.85); }
 
