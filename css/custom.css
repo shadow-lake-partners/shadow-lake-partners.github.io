@@ -1,0 +1,78 @@
+/* The TypeWritter Stuff */
+
+.typewriter {
+
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange;
+    /* this controls how wide the blinker is */
+    /* The typwriter cursor */
+
+    white-space: nowrap;
+    /* Keeps the content on a single line */
+    /* margin: 0 auto; Use this is we want the typing to start in the center */
+
+    margin: 1 auto;
+    /* Use this is we want the typing to start on the left */
+    /* Gives that scrolling effect as the typing happens */
+
+    /* letter-spacing: .15em; */
+    letter-spacing: .1em;
+    /* Adjust as needed */
+    
+    animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    /* animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite; */
+    }
+
+    /* note: was (40,end) */
+    
+    
+/* Just the blinker */
+    
+.blinker {
+    
+    overflow: hidden;
+    /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(234, 234, 232);
+    
+    /* The typwriter cursor */
+    white-space: nowrap;
+    
+    /* Keeps the content on a single line */
+    /* margin: 0 auto; Use this is we want the typing to start in the center */
+    margin: 1 auto;
+    
+    /* Use this is we want the typing to start on the left */
+    /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em;
+    /* Adjust as needed */
+    /* animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite; */
+    
+    animation: blink-caret .75s step-end infinite;
+    }
+    
+    
+    /* The typing effect */
+    
+    @keyframes typing {
+    from {
+    width: 0
+    }
+    to {
+    width: 100% 
+    }
+    }
+    
+    /* the above width was 100% */
+    
+    /* The typewriter cursor effect */
+    
+    @keyframes blink-caret {
+    from,
+    to {
+    border-color: transparent
+    }
+    50% {
+    border-color: rgb(235, 235, 235);
+    }
+    }
